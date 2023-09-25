@@ -1,0 +1,36 @@
+.quiz {
+	background-color: rgba(172, 71, 174, 0.52);
+	height: 1364px;
+	width: 50%;
+	float: left;
+	align-items: stretch;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+}
+
+.quiz::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+quiz > gotoQuiz {
+	display: flex;
+	align-items: center;
+	margin-top: 700px;
+}
+
+a {
+	text-align: center;
+}
+
+.testImage {
+	text-align: center;
+	margin: auto;
+	align-items: center;
+	width: 80%;
+	display: block;
+	height: 80%;
+	padding: 10px;
+}
