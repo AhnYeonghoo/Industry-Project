@@ -46,7 +46,7 @@ print('학습을 진행하는 기기:', device)
 # ------------------------------------------------------------------------------------------------------------------------ #
 
 
-filePath = './' # 영상의 경로
+filePath = '' # 영상의 경로
 
 ###  함수 정의  ###
 
@@ -66,7 +66,7 @@ def get_number_of_frames(file_path: str) -> int:
 def extract_N_video_frames(file_path: str, number_of_samples: int = 6) -> List[np.ndarray]:
     nb_frames = int(get_number_of_frames(file_path= filePath))
     
-    div = 100
+    div = 30
     div_frames = nb_frames / div
     temp = 0
     video_frames = []
@@ -86,7 +86,7 @@ def resize_image(image: np.ndarray, new_size: Tuple[int,int]) -> np.ndarray:
     return cv2.resize(image, new_size, interpolation = cv2.INTER_AREA)
 
 
-def preprocessing_input(file_path: str, file_name: str, training: bool = True) -> Tuple[np.ndarray, np.ndarray]:
+def preprocessing_input(file_path: str, training: bool = True) -> Tuple[np.ndarray, np.ndarray]:
     sampled = extract_N_video_frames(file_path = filePath, number_of_samples= 6)
     resized_images = [resize_image(image= im, new_size= (224,224)) for im in sampled]
     preprocessed_video = np.stack(resized_images)
@@ -94,24 +94,8 @@ def preprocessing_input(file_path: str, file_name: str, training: bool = True) -
     return preprocessed_video
 
 
-# input Shape 변형
-def reshape_to_expected_input(dataset: List[Tuple[np.ndarray]]) -> Tuple[np.ndarray]:
-    
-    x0_list = []
-    
-    for i in range(0,len(dataset)):
-        x0_list.append(dataset[i][0])
-    return np.stack(x0_list)
-
-
-
 test_data= []
 test_data.append(preprocessing_input(file_path= filePath))
-
-test_input = reshape_to_expected_input(dataset= test_data)
-del test_data
-
-
 
 # 데이터 Loader
 class SignLanGuageDataset(Dataset):
@@ -130,7 +114,7 @@ class SignLanGuageDataset(Dataset):
 
         return image_data
 
-test_dataset = SignLanGuageDataset(imagedata=test_input[0])
+test_dataset = SignLanGuageDataset(imagedata=test_data)
 test_dataloader = DataLoader(dataset=test_dataset, batch_size=1, shuffle=False, num_workers=4)
 
 ###  모델  ###
@@ -202,9 +186,8 @@ class flow_r2plus1d_18(nn.Module):
         out = self.fc1(out)
 
         return out
-    
-    
-    
+
+
 model = r2plus1d_18(num_classes = 10).to(device)
 criterion = torch.nn.CrossEntropyLoss().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=3e-4)
@@ -218,6 +201,7 @@ with torch.cuda.device(0):
         data = data.to(device)
         
         output = model(data)
+        
         
 # output
 # 10-dimension one-hot encoding 값으로 출력됨
@@ -254,7 +238,8 @@ def one_hot_to_string(one_hot_vector):
     return label_mapping[index]
 
 
-result = one_hot_to_string(output)
+
+result = one_hot_to_string(output.cpu().detach().numpy())
 
 print(result)
 
