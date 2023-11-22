@@ -5,6 +5,12 @@ Python dependencies:
 pip install fastapi[all] python-multipart ffmpegio aiofiles
 ```
 
+AI dependencies:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install einops opencv-python
+```
+
 Installing `fastapi[all]` also makes the `uvicorn` command available.
 
 In addition, [ffmpeg executables must be installed & available globally](https://python-ffmpegio.github.io/python-ffmpegio/install.html#install-ffmpeg-program) or located manually, with the `Ffmpeg` Environment variable set as the path to the folder containing ffmpeg and ffprobe executables.
