@@ -1,0 +1,125 @@
+
+
+
+.container_learn_page {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* background: url(../img/BG.png) no-repeat center;
+  background-size: cover; */
+  background-color: #EAE0DE;
+  color: #2BA966;
+}
+
+
+
+
+.navbar {
+  margin: 30px 0px 30px 0px;
+  width: 500px;
+  height: 60px;
+  display: flex;
+  background-color: #EAE0DE;
+  border-radius: 36px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+}
+
+.navbar:hover {
+  height: 70;
+
+}
+
+.divider {
+  flex-basis: 1px;
+  height: 40px;
+  background-color: rgb(176, 176, 176);
+}
+
+.logo {
+  /* position: absolute; */
+  width: 150px;
+  height: auto;
+  /* left: 768px;
+  top: 22px; */
+  margin: 0px 20px 0px 20px;
+
+}
+
+.profile_img {
+  width: 40px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+}
+
+.navtext {
+  margin: 0px 10px 0px 10px;
+  font-weight: 500;
+  font-size: 15pt;
+  cursor: pointer;
+}
+
+
+.container_page_learn_category{
+  width: 100vh;
+  height: 700px;
+  background: url(../img/BG.png) no-repeat center;
+  background-size: cover;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
+  height: 70%;
+  width: 100%;
+}
+
+
+
+
+
+
+.learn_title {
+  font-size: 55pt;
+  font-weight: 700;
+  color: #EAE0DE
+}
+
+
+.container_content_learn {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+}
+
+.learn_category_btn {
+  width: 300px;
+  height: 100px;
+  margin: 50px 100px;
+  background-color: #EAE0DE;
+  font-size: 30pt;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+  transition: all .4s;
+}
+.learn_category_btn:hover{
+  width: 320px;
+  background-color: #2BA966;
+  color: #EAE0DE;
+  transition: all .4s;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
+}

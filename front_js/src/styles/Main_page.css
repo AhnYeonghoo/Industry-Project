@@ -1,0 +1,265 @@
+
+
+
+.container_mainpage {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: url(../img/BG.png) no-repeat center;
+  background-size: cover;
+  color: #2BA966;
+}
+
+
+
+
+.navbar {
+  margin: 30px 0px 30px 0px;
+  width: 500px;
+  height: 60px;
+  display: flex;
+  background-color: #EAE0DE;
+  border-radius: 36px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+}
+
+.navbar:hover {
+  height: 70;
+
+}
+
+.divider {
+  flex-basis: 1px;
+  height: 40px;
+  background-color: rgb(176, 176, 176);
+}
+
+.logo {
+  /* position: absolute; */
+  width: 150px;
+  height: auto;
+  /* left: 768px;
+  top: 22px; */
+  margin: 0px 20px 0px 20px;
+
+}
+
+.profile_img {
+  width: 40px;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+}
+
+.navtext {
+  margin: 0px 10px 0px 10px;
+  font-weight: 500;
+  font-size: 15pt;
+  cursor: pointer;
+}
+
+
+.container_page_main{
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px 0px 0px;
+  height: 70%;
+  width: 100%;
+}
+
+
+
+
+
+.container_title_main {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.ranking_img {
+  height: 55px;
+}
+
+.main_title {
+  font-size: 40pt;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+
+.container_content_main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.container_content_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
+}
+.ranking_box_main{
+  width: 400px;
+  height: 450px;
+  background-color: #EAE0DE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
+  border-radius: 20px;
+  padding: 10px;
+  color: black;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+}
+.ranking_list {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.ranking_num {
+  font-size: 30pt;
+  font-weight: 700;
+}
+.ranking_profile {
+  height: 55px;
+}
+.ranking_name {
+  width: 80px;
+  font-size: 20pt;
+  font-weight: 400;
+}
+.ranking_point {
+  font-size: 20pt;
+  font-weight: 700;
+}
+
+
+
+.container_content_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+
+}
+
+.my_info_main {
+  width: 400px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #EAE0DE;
+  border-radius: 20px;
+  border: 6px solid #2BA966;
+  color: #2BA966;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+}
+.my_score_main{
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+}
+.my_score_title_main {
+  font-size: 20pt;
+  font-weight: 600;
+}
+.my_score_num_main {
+  font-size: 30pt;
+  font-weight: 800;
+}
+.divider_green {
+  flex-basis: 3px;
+  height: 80px;
+  background-color: #2ba966ae;
+}
+.my_ranking {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+}
+.my_ranking_title {
+  font-size: 20pt;
+  font-weight: 600;
+}
+.my_ranking_num {
+  font-size: 30pt;
+  font-weight: 800;
+}
+
+.learn_btn {
+  width: 400px;
+  height: 80px;
+  background-color: #EAE0DE;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s;
+}
+.learn_btn:hover{
+  background-color: #2BA966;
+  color: #EAE0DE;
+  transition: all 0.4s;
+}
+
+.game_btn {
+  width: 400px;
+  height: 80px;
+  color: #EAE0DE;
+  background-color: #2BA966;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s;
+}
+.game_btn:hover{
+  background-color: #126238;
+  color: #EAE0DE;  
+  transition: all 0.4s;
+}
+
+.revision_btn {
+  width: 400px;
+  height: 80px;
+  background-color: #EAE0DE;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s;
+}
+.revision_btn:hover{
+  background-color: #2BA966;
+  color: #EAE0DE;  
+  transition: all 0.4s;
+}
