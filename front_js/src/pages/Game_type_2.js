@@ -9,7 +9,7 @@ function Game_type_2() {
   let webcamRef = useRef(null)
   let mediaRecorderRef = useRef(null)
   let navigate = useNavigate()
-  let [quizvid, quizchange] = useState( {quiznum: 2, quizword : '나무' }  )
+  let [quizvid, quizchange] = useState( {quiznum: 2, quizword : '가렵다' }  )
   let recordedChunksRef = useRef([])
 
   const handleDataAvailable = useCallback(
