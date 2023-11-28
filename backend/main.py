@@ -1,6 +1,7 @@
 from os import path
 import os
 import secrets
+import random
 from typing import Annotated
 import aiofiles
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -70,3 +71,11 @@ async def predict(file: Annotated[UploadFile, File(description=f"A video file. A
     sign = predict_sign(mp4FilePath);
     os.remove(mp4FilePath);
     return {"predicted": sign}
+
+entries = ["가렵다", "가슴", "감전", "개", "거실", "계곡", "기절", "도둑", "동전", "아빠"]
+@app.post("/quiz/",
+          description="Returns a random quiz.",
+          response_description="The correct answer and 4 random choices (including the answer).")
+async def quiz():
+    choices = random.sample(entries, k=4)
+    return {"answer": random.choice(choices), "choices": choices}
