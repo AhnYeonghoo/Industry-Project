@@ -2,7 +2,7 @@ import { configureStore , createSlice} from '@reduxjs/toolkit'
 
 let user_info = createSlice({
     name : 'user_info',
-    initialState : {name : '이준석', score : 185, rank : 11}
+    initialState : {name : '이준석', score : 55, rank : 11}
 })
 
 //게임 상태 관리 gametype : 게임 종류, type1은 단어고르기 4번, 2는 직접하기 2번  / score : 현재점수  / heart : 남은목숨

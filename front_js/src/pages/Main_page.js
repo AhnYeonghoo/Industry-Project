@@ -31,35 +31,35 @@ function Main_page() {
                     <img className='ranking_profile' src={profile_img_g} ></img>
                     <div className='ranking_name'> 카리나 </div>
                     <span className='divider'></span>
-                    <div className='ranking_point'> 255점 </div>
+                    <div className='ranking_point'> 100점 </div>
                   </div>
                   <div className='ranking_list'> 
                     <div className='ranking_num'> 2 </div>
                     <img className='ranking_profile' src={profile_img_g} ></img>
                     <div className='ranking_name'> 윈터 </div>
                     <span className='divider'></span>
-                    <div className='ranking_point'> 215점 </div>
+                    <div className='ranking_point'> 90점 </div>
                   </div>
                   <div className='ranking_list'> 
                     <div className='ranking_num'> 3 </div>
                     <img className='ranking_profile' src={profile_img_g} ></img>
                     <div className='ranking_name'> 하니 </div>
                     <span className='divider'></span>
-                    <div className='ranking_point'> 205점 </div>
+                    <div className='ranking_point'> 85점 </div>
                   </div>
                   <div className='ranking_list'> 
                     <div className='ranking_num'> 4 </div>
                     <img className='ranking_profile' src={profile_img_g} ></img>
                     <div className='ranking_name'> 민지 </div>
                     <span className='divider'></span>
-                    <div className='ranking_point'> 200점 </div>
+                    <div className='ranking_point'> 75점 </div>
                   </div>
                   <div className='ranking_list'> 
                     <div className='ranking_num'> 5 </div>
                     <img className='ranking_profile' src={profile_img_g} ></img>
                     <div className='ranking_name'> 예지 </div>
                     <span className='divider'></span>
-                    <div className='ranking_point'> 195점 </div>
+                    <div className='ranking_point'> 70점 </div>
                   </div>
                 </div>
               </div>

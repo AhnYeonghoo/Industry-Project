@@ -38,6 +38,41 @@ function Game_page_2() {
     },[game_state.heart])
 
 
+
+
+    //시간 다되면 게임 종료
+
+    //let [timeover, settimeover] = useState(ture);
+    // useEffect( ()=> {
+    //   let timer = setTimeout(()=> { navigate('/Game_result_page')
+    //                                 console.log('timeover')
+    //                                 dispatch(reset())}, 50000)
+    // })
+
+
+    const [count, setCount] = useState(60);
+    const [filled, setFilled] = useState(0);
+    useEffect(() => {
+      const id = setInterval(() => {
+        setCount((count) => count - 1)
+        setFilled((filled) => filled + (100/60))
+        console.log(filled)
+      }, 1000);
+      
+      if(count === 0) {
+        navigate('/Game_result_page')
+        console.log('timeover')
+        dispatch(reset())
+      }
+      return () => clearInterval(id)
+    }, [count,filled]);
+
+
+
+
+
+
+
     //게임 스테이지 변경 타입1 4번, 타입2 2번
     useEffect( ()=>{
       if(game_state.num <= 2 && game_state.num > 0){
@@ -65,7 +100,14 @@ function Game_page_2() {
               <div className='now_score_num'> {game_state.score} </div>
             </div>
             <div className='timebar'>
-              <div className='time'> </div>
+              <div className='time' style={{
+                  width: `${filled}%`,
+                  height: "5px",
+                  backgroundcolor: "#fa472f;",
+                  borderradius: "10px",
+                  transition: "width 1s"
+              }}>  </div>
+              <div className='timeleft'> 남은시간 : {count}</div>
             </div>
             <div className='heart_box'>
               {
