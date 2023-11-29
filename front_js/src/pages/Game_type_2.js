@@ -79,11 +79,11 @@ function Game_type_2() {
           </div>
 
           <div className='start_btn' onClick={()=>{ 
-            // Start recording. Set a timer that runs for 10 seconds (that ends the recording when done).
+            // Start recording. Set a timer that runs for 5 seconds (that ends the recording when done).
             // TODO: Animate the time remaining bar to show progress?
             console.log("Start recording")
             startRecording()
-            setTimeout(endRecording, 1000)
+            setTimeout(endRecording, 5000)
           }}>시작</div>
         
       </div>
