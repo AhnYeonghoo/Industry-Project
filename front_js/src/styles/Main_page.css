@@ -134,6 +134,7 @@
   margin-bottom: 10px;
 }
 .ranking_num {
+  width: 25px;
   font-size: 30pt;
   font-weight: 700;
 }
@@ -146,6 +147,7 @@
   font-weight: 400;
 }
 .ranking_point {
+  width: 80px;
   font-size: 20pt;
   font-weight: 700;
 }

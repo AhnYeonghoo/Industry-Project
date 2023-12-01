@@ -64,8 +64,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 50px 0px 0px 0px;
-  height: 70%;
+  margin: 10px 0px 0px 0px;
+  height: 750px;
   width: 100%;
 }
 
@@ -75,12 +75,11 @@
 
 .container_game_info {
   display: flex;
-  height: 70px;
+  height: 100px;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .now_score {
@@ -130,6 +129,18 @@
 }
 
 
+
+.vidtimebar {
+  background-color: #EAE0DE;
+  height: 10px;
+  width: 480px;
+  font-weight: 800;
+  color: #EAE0DE;
+  font-size: 20pt;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
+}
+
 .heart_box{
   width: 120px;
   height: 50px;
@@ -160,25 +171,47 @@
 }
 
 .game_howto {
-  color: #EAE0DE;
+  background-color: #dee2ea;
+  height: 60px;
+  width: 500px;
+  border-radius: 30px;
+  color: #2BA966;
   font-size: 20pt;
-  font-weight: 600;
+  font-weight: 800;
 }
 
-.camera_container {
+
+.loading{
   border-radius: 20px;
   margin: 10px;
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 375px;
   opacity: 1;
-  background: url(../img/guideline_bg.png) no-repeat center;
+  background: url(../img/loading.png) no-repeat center;
+  background-size: cover;
+}
+.startwindow{
+  border-radius: 20px;
+
+  width: 500px;
+  height: 375px;
+  opacity: 1;
+  background: url(../img/start.png) no-repeat center;
+  background-size: cover;
+}
+.camera_container {
+  border-radius: 20px;
+  width: 500px;
+  height: 375px;
+
+  background: url(../img/guideline_2.png) no-repeat center;
   background-size: cover;
   box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
 }
 .camera{
-  width: 400px;
-  height: 300px;
-  opacity: 0.85;
+  width: 500px;
+  height: 375px;
+
   border-radius: 20px;
   transform: rotateY(180deg);
 }

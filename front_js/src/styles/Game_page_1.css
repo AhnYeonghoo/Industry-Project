@@ -64,8 +64,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 50px 0px 0px 0px;
-  height: 70%;
+  margin: 10px 0px 0px 0px;
+  height: 750px;
   width: 100%;
 }
 
@@ -75,12 +75,11 @@
 
 .container_game_info {
   display: flex;
-  height: 70px;
+  height: 100px;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .now_score {
@@ -141,6 +140,7 @@
 
 .container_game {
   height: 600px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -148,17 +148,22 @@
 }
 
 .game_howto {
-  color: #EAE0DE;
-  font-size: 20pt;
-  font-weight: 600;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eae0de;
+  /* font-size: 20pt;
+  font-weight: 600; */
 }
 
 .video_container {
   border-radius: 20px;
+  height: 281.25px;
   box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.45);
 }
 .video {
-  width: 400px;
+  width: 500px;
   border-radius: 20px;
 }
 

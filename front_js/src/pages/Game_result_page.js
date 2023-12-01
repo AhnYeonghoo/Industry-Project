@@ -4,6 +4,7 @@ import profile_img from '../img/profile_img.png';
 import '../styles/Game_result_page.css';
 import {  reset} from '../store';
 import { useSelector , useDispatch } from "react-redux"
+import { useEffect, useState } from 'react';
 
 
 function Game_result_page() {
@@ -11,11 +12,12 @@ function Game_result_page() {
     let dispatch = useDispatch()
     let user = useSelector((state) => { return state.user_info } )
     let game_state = useSelector((state) => { return state.game_state } )
+
     return(
       <div className='container_game_result'>
         <div className='navbar'>
           <img className='logo' src={logo} onClick={()=>{ navigate('/Main_page') }} ></img> <span className='divider'></span>
-          <div className='navtext'> 안녕하세요 000님 </div>
+          <div className='navtext'> 안녕하세요 {user.name}님 </div>
           <img className='profile_img' src={profile_img} onClick={()=>{ navigate('/App') }} ></img>
         </div>
         <div className='container_page'>

@@ -8,7 +8,7 @@ import '../styles/Game_page_2.css';
 import Game_type_1 from './Game_type_1';
 import Game_type_2 from './Game_type_2';
 import { useSelector , useDispatch } from "react-redux"
-import { changetype1, fullheart , zeroscore, changetype2, reset} from '../store';
+import { changetype1, changetype2, reset} from '../store';
 
 
 
@@ -17,7 +17,6 @@ function Game_page_2() {
     let user = useSelector((state) => { return state.user_info } )
     let game_state = useSelector((state) => { return state.game_state } )
     let dispatch = useDispatch()
-    let [quizvid, quizchange] = useState( {quiznum: 2, quizword : '나무' }  )
 
     //처음 초기화
     useEffect( ()=> {
@@ -33,36 +32,24 @@ function Game_page_2() {
       if(game_state.heart == 0){
         navigate('/Game_result_page')
         console.log('over')
-        dispatch(reset())
+        //dispatch(reset())
       }
     },[game_state.heart])
 
 
-
-
     //시간 다되면 게임 종료
-
-    //let [timeover, settimeover] = useState(ture);
-    // useEffect( ()=> {
-    //   let timer = setTimeout(()=> { navigate('/Game_result_page')
-    //                                 console.log('timeover')
-    //                                 dispatch(reset())}, 50000)
-    // })
-
-
-    const [count, setCount] = useState(60);
+    const [count, setCount] = useState(6000);
     const [filled, setFilled] = useState(0);
     useEffect(() => {
       const id = setInterval(() => {
         setCount((count) => count - 1)
-        setFilled((filled) => filled + (100/60))
-        console.log(filled)
+        setFilled((filled) => filled + (100/6000))
       }, 1000);
       
       if(count === 0) {
         navigate('/Game_result_page')
         console.log('timeover')
-        dispatch(reset())
+        //dispatch(reset())
       }
       return () => clearInterval(id)
     }, [count,filled]);
@@ -70,18 +57,17 @@ function Game_page_2() {
 
 
 
-
-
-
     //게임 스테이지 변경 타입1 4번, 타입2 2번
     useEffect( ()=>{
       if(game_state.num <= 2 && game_state.num > 0){
-        dispatch(changetype2())
+        
+        setTimeout( ()=> {dispatch(changetype2())}, 1000 )
       }
       if(game_state.num == 0){
-        navigate('/Game_result_page')
+        setTimeout( ()=>{ navigate('/Game_result_page') }, 1000 )
+        
         console.log('over')
-        dispatch(reset())
+        //dispatch(reset())
       }
       
     },[game_state.num])

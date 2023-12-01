@@ -40,6 +40,7 @@ let game_state = createSlice({
             state.score -= 10
             state.heart -= 1
         }
+        
     }
 })
 

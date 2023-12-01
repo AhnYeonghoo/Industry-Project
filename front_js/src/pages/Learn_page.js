@@ -18,12 +18,12 @@ function Learn_page() {
         </div>
         <div className='container_page_learn'>
           <div className='learn_video_word'>
-            <div className='learn_word'> 나무 </div>
+            <div className='learn_word'> 별 </div>
             <div className='learn_video_container'> 
               <video className='learn_video' src={video} controls autoPlay muted loop> </video>
             </div>
           </div>
-          <div className='learn_next_btn'>다음</div>
+          <div className='learn_next_btn' onClick={()=>{ navigate('/Learn_category_page')}}>다음</div>
           
         </div>
 
